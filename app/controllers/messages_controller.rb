@@ -22,4 +22,10 @@ class MessagesController < ApplicationController
     end
   end
 
+  def request_prescription
+    PrescriptionRequestService.call(User.current)
+
+    redirect_to messages_url, flash: { notice: 'The prescription was requested, you will be advised when it is done.' }
+  end
+
 end
