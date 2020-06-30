@@ -1,0 +1,16 @@
+doctor:
+  first_name: Lisa
+  last_name: Simpson
+  is_doctor: true
+  is_patient: false
+
+admin:
+  first_name: Marge
+  last_name: Simpson
+  is_admin: true
+  is_patient: false
+
+patient:
+  first_name: Bart
+  last_name: Simpson
+  is_patient: true
