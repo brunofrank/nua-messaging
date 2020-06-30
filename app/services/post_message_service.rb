@@ -15,7 +15,7 @@ class PostMessageService < ApplicationService
 
   private
 
-  attr_reader :body, :from, :to, :original_message
+  attr_reader :body, :from, :to
 
   def message_destination
     can_reach_doctor? ? to : User.default_admin
