@@ -6,6 +6,12 @@
   <div class="card-body">
     <p class="card-text"><%= @message.body %></p>
     <%= link_to "Reply", new_message_path, class: "btn btn-primary" %>
-    <a href="#" class="btn btn-primary">I've lost my prescription</a>
+    <%= link_to "I've lost my prescription", request_prescription_message_url(@message),
+          class: "btn btn-primary",
+          data: {
+            confirm: "Do you really want to order a new prescription? \r\rIt will cost €10 and will be charged in your credit/debit card!",
+            method: :post
+          }
+    %>
   </div>
 </div>
